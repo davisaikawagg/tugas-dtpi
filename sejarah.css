@@ -1,0 +1,331 @@
+/* =============== VARIABEL WARNA =============== */
+:root {
+  --color-dark-blue: #0a192f;
+  --color-medium-blue: #112240;
+  --color-primary-text: #e6f1ff;
+  --color-highlight: #c5d9f2;
+  --color-divider: #303c55;
+  --color-extra-dark: #050810;
+}
+
+/* =============== RESET SEDERHANA =============== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============== BODY & LAYOUT DASAR =============== */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  background-color: var(--color-dark-blue);
+  color: var(--color-primary-text);
+  padding-bottom: 50px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =============== HEADER KONTEN (BUKAN NAVBAR) =============== */
+/* kalau kamu masih punya header judul besar di atas konten,
+   pakai class="page-header" di HTML dan style-nya di sini */
+
+.page-header {
+  background-color: var(--color-medium-blue);
+  padding: 80px 0;
+  text-align: center;
+  border-bottom: 5px solid var(--color-highlight);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.page-header h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: var(--color-primary-text);
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(230, 241, 255, 0.3);
+}
+
+.page-header p {
+  font-size: 1.1em;
+  opacity: 0.8;
+  color: var(--color-highlight);
+}
+
+/* =============== VIDEO OVERVIEW =============== */
+#video-overview {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#video-overview h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: var(--color-highlight);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 3px solid var(--color-highlight);
+  border-radius: 8px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =============== GARIS PEMBATAS =============== */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-divider);
+  margin: 40px auto;
+  width: 90%;
+}
+
+/* =============== TIMELINE =============== */
+main.timeline-container {
+  padding: 40px 0;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: var(--color-medium-blue);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--color-highlight);
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--color-divider);
+  padding-bottom: 10px;
+  color: var(--color-highlight);
+}
+
+.timeline-item p strong {
+  color: var(--color-highlight);
+  font-weight: 600;
+}
+
+/* =============== GAMBAR FILM =============== */
+.film-visual {
+  margin: 25px 0;
+  text-align: center;
+  background-color: var(--color-dark-blue);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--color-highlight);
+}
+
+.film-visual img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.film-visual figcaption {
+  font-size: 0.9em;
+  color: var(--color-primary-text);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* =============== CATATAN =============== */
+.note {
+  background-color: var(--color-extra-dark);
+  padding: 20px;
+  margin-top: 25px;
+  border-left: 5px solid var(--color-highlight);
+  font-size: 0.95em;
+  color: var(--color-primary-text);
+  border-radius: 5px;
+}
+
+/* =============== GARIS TIMELINE DI TENGAH =============== */
+.timeline-divider {
+  display: block;
+  width: 3px;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-text),
+    var(--color-highlight)
+  );
+  margin: 0 auto;
+  position: relative;
+  top: -30px;
+}
+
+.timeline-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-highlight);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* =============== REFERENSI =============== */
+#referensi {
+  padding: 50px 0;
+  background-color: var(--color-medium-blue);
+  border-top: 5px solid var(--color-highlight);
+}
+
+#referensi h2 {
+  font-size: 1.8em;
+  color: var(--color-primary-text);
+  border-bottom: 2px solid var(--color-divider);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#referensi ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#referensi li {
+  margin-bottom: 18px;
+  color: var(--color-primary-text);
+  padding-left: 30px;
+  position: relative;
+}
+
+#referensi li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--color-highlight);
+  font-size: 1.2em;
+}
+
+#referensi li strong {
+  color: var(--color-highlight);
+  font-weight: 600;
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 50px 0;
+  }
+
+  .page-header h1 {
+    font-size: 2.5em;
+  }
+
+  .timeline-item {
+    padding: 20px;
+  }
+
+  .timeline-divider {
+    display: none;
+  }
+}
+
+/* ============================
+   HEADER / NAVIGASI ATAS
+   ============================ */
+header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #080c1c;
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: 1px solid #ffffff20;
+  padding: 0; /* override padding besar dari header */
+}
+
+/* Container khusus header (bar jadi lebih ramping) */
+header.sticky .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1.25rem; /* kecilin tinggi bar */
+}
+
+/* BRAND (logo + teks) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* LOGO film – satu rule saja */
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-image: url("assets/logo-filmindo.png"); /* atau logo-ui.png, pilih salah satu */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.brand:hover {
+  opacity: 0.9;
+}
+
+/* ============================
+      NAVIGATION LINKS
+   ============================ */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.85rem; /* kecilin padding link */
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: #0f172a;
+}
+
+/* FOOTER */
+footer {
+  padding: 2rem 0;
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px solid var(--color-divider);
+  margin-top: 2rem;
+}

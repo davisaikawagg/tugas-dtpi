@@ -1,0 +1,209 @@
+/* Poster grid*/
+.poster-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 0.5rem;
+}
+
+.poster-card {
+  background: #021526; /* warna kotak */
+  border: 1px solid #d2d2d200;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff; /* teks putih */
+}
+
+.poster-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #717171;
+}
+
+.poster-card figcaption {
+  padding: 0.6rem 0.8rem;
+  font-weight: 700;
+  color: #ffffff; /* teks putih */
+}
+
+@media (max-width: 768px) {
+  .poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .poster-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ref-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.ref-list li {
+  color: #ffffff; /* teks putih */
+}
+
+/* THEME COLORS */
+:root {
+  --bg: #040b17;
+  --panel: #28292c;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --line: #ffffff00;
+  --accent: #0076a9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+nav a {
+  color: #ffffff; /* teks menu putih */
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+}
+
+nav a.active,
+nav a:hover {
+  background: #0f172a; /* efek hover */
+}
+
+main section {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+main section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2,
+p {
+  color: #ffffff;
+  text-align: justify; /* semua teks putih */
+}
+
+.card {
+  background: #021526; /* kotak warna */
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* teks putih */
+}
+
+footer {
+  padding: 2rem 0;
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+}
+container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+/* ============================
+   HEADER / NAVIGASI ATAS
+============================ */
+header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #080c1c;
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: 1px solid #ffffff20;
+}
+
+/* Container khusus header */
+header.sticky .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px; /* tinggi bar konsisten */
+  padding: 0 1.25rem;
+}
+
+/* BRAND (logo + teks) yang bisa diklik */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  text-decoration: none; /* hilang underline */
+}
+
+/* LOGO film */
+.brand .logo {
+  width: 55px; /* ukuran logo digedein */
+  height: 55px;
+  background-image: url("assets/logo-filmindo.png"); /* ganti sesuai file kamu */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* efek hover brand */
+.brand:hover {
+  opacity: 0.85;
+}
+
+/* ============================
+      NAVIGATION LINKS
+============================ */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: #0f172a; /* hover gelap */
+}
+.brand .logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  background-image: url("logo-ui.png"); /* balik seperti semula */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
